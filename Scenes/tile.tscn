@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/tilemap/tilemap.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="tile" type="Node"]
+editor/display_folded = true
+
+[node name="sprite" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="body" type="StaticBody2D" parent="sprite"]
+
+[node name="shape" type="CollisionShape2D" parent="sprite/body"]
+shape = SubResource( 1 )
+
+[node name="sprite2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="body" type="StaticBody2D" parent="sprite2"]
+
+[node name="shape" type="CollisionShape2D" parent="sprite2/body"]
+shape = SubResource( 1 )
+
+[node name="sprite3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="body" type="StaticBody2D" parent="sprite3"]
+
+[node name="shape" type="CollisionShape2D" parent="sprite3/body"]
+shape = SubResource( 1 )
